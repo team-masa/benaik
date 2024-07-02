@@ -1,6 +1,6 @@
 
 
-const K = () => {
+const K = {
 NAVLINKS:[
     {
         name: "Home",

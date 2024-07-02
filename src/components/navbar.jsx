@@ -1,17 +1,19 @@
-import React from 'react'
+
+import { Link } from 'react-router-dom'
 import K from '../constant'
-import { Link } from 'lucide-react'
+
 
 const Navbar = () => {
   return (
     <div>
         <span>Benaik</span>
         <div>
-            {K.NAVLINKS.map((item, index) => {
+            {K.NAVLINKS.map(
+                (item, index) => {
                 return(
                     <Link key={index} to={item.path}>{item.name}
-                    </Link>
-                )
+                    </Link>)
+                
             }
 
             )}

@@ -1,0 +1,1 @@
+import weddOne from "./images/wedd.jpg"
