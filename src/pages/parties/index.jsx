@@ -1,9 +1,12 @@
+import Event from "./components/event";
+import Hero from "./components/hero";
 
-
-const PartiesPage = () => {
+export function Parties() {
   return (
-    <div>PartiesPage</div>
-  )
+    <div>
+      <Hero />
+      <Event />
+    </div>
+  );
 }
-
-export default PartiesPage;
+export default Parties

@@ -3,7 +3,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/rootLayout";
 import LandingPage from "./pages/landing";
-import PartiesPage from "./pages/parties";
+import Parties from "./pages/parties";
 import WeddingPage from "./pages/weddings";
 import About from "./pages/about-us";
 import ContactUs from "./pages/contact-us";
@@ -19,6 +19,7 @@ function App () {
 
         {
           index: true,
+          path: "/",
           element: <LandingPage />
         },
 
@@ -29,7 +30,7 @@ function App () {
 
         {
           path: "parties",
-          element: <PartiesPage />
+          element: <Parties />
         },
 
         {
