@@ -8,7 +8,7 @@ import heroImage3 from '../../../assets/images/party.jpg';
 const PartyHero = () => {
   return (
     <div className="relative h-[80vh] flex items-center justify-center bg-black overflow-hidden">
-      <CCarousel controls indicators interval={3000} className="absolute inset-0 w-full h-full">
+      <CCarousel  indicators interval={3000} className="absolute inset-0 w-full h-full">
         <CCarouselItem>
           <CImage className="d-block w-100 h-full object-cover opacity-70" src={heroImage1} alt="Party Hero 1" />
         </CCarouselItem>

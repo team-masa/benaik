@@ -1,10 +1,10 @@
 import React from 'react';
 import { confOne, confTwo, funOne, funTwo, partyOne, partyTwo, weddOne, weddTwo } from "../../../assets";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination,} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+
 
 const Hero = () => {
     return (
@@ -19,8 +19,8 @@ const Hero = () => {
                 pagination={{
                     clickable: true,
                 }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
+           
+                modules={[Autoplay, Pagination,]}
                 className="absolute inset-0 w-full h-full"
             >
                 <SwiperSlide>
