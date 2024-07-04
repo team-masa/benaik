@@ -1,11 +1,11 @@
-import Event from "./components/event";
+import PartyEvents from "./components/event";
 import Hero from "./components/hero";
 
 export function Parties() {
   return (
     <div>
       <Hero />
-      <Event />
+      <PartyEvents />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import featImg2 from '../../../assets/images/Home.jpeg';
 
 const Features = () => {
   return (
-    <div className="flex justify-center items-center py-16 px-8 bg-white">
+    <div id="features" className="flex justify-center items-center py-16 px-8 bg-white">
       <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 ">
         {/* Efficient Event Planning  */}
         <div className="flex flex-col justify-center items-start text-left">

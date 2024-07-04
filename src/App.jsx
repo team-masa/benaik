@@ -7,8 +7,12 @@ import Parties from "./pages/parties";
 import WeddingPage from "./pages/weddings";
 import About from "./pages/about-us";
 import ContactUs from "./pages/contact-us";
+import Events from "./pages/events";
+import SignUpForm from "./pages/signup";
+import LoginForm from "./pages/login";
+import EventForm from "./pages/eventForms/components/createEvents";
 
-function App () {
+function App() {
   const router = createBrowserRouter([
 
 
@@ -27,22 +31,36 @@ function App () {
           path: "about-us",
           element: <About />
         },
+        {
+          path: "events",
+          element: <Events />
+        },
 
         {
-          path: "parties",
+          path: "events/parties",
           element: <Parties />
         },
 
         {
-          path: "wedding",
+          path: "events/weddings",
           element: <WeddingPage />
         },
         {
           path: "contact-us",
           element: <ContactUs />
         },
-
-
+        {
+          path: "signup",
+          element: <SignUpForm />
+        },
+        {
+          path: "login",
+          element: <LoginForm />
+        },
+        {
+          path: "create-event",
+          element: <EventForm/>
+        },
 
 
       ]
@@ -50,7 +68,7 @@ function App () {
 
   ]);
 
-  return <RouterProvider router={router}/>;
+  return <RouterProvider router={router} />;
 
 }
 
