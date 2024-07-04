@@ -1,5 +1,6 @@
 import React from 'react'
 
+<<<<<<< HEAD
 const PartyEvent = () => {
   return (
     <div>
@@ -72,3 +73,12 @@ const PartyEvent = () => {
 }
 
 export default PartyEvent
+=======
+const PartyEvents = () => {
+  return (
+    <div>PartyEvents</div>
+  )
+}
+
+export default PartyEvents
+>>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc

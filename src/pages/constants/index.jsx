@@ -6,7 +6,7 @@ export const K = {
     },
     {
       name: "Features",
-      path: "/about-us",
+      path: "/#features",
     },
     {
       name: "Events",
@@ -14,7 +14,8 @@ export const K = {
     },
     {
       name: "Contact",
-      path: "/contact-us",
+      path: "#contact-us"
     },
-  ]
+  ],
+  
 };
