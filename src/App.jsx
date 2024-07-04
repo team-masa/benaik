@@ -7,8 +7,9 @@ import Parties from "./pages/parties";
 import WeddingPage from "./pages/weddings";
 import About from "./pages/about-us";
 import ContactUs from "./pages/contact-us";
+import Funeral from "./pages/funerals";
 
-function App () {
+function App() {
   const router = createBrowserRouter([
 
 
@@ -29,17 +30,23 @@ function App () {
         },
 
         {
-          path: "parties",
+          path: "event/parties",
           element: <Parties />
         },
 
         {
-          path: "wedding",
+          path: "event/wedding",
           element: <WeddingPage />
         },
         {
           path: "contact-us",
           element: <ContactUs />
+
+        },
+        {
+          path: "event/funeral",
+          element: <Funeral />
+
         },
 
 
@@ -50,7 +57,7 @@ function App () {
 
   ]);
 
-  return <RouterProvider router={router}/>;
+  return <RouterProvider router={router} />;
 
 }
 

@@ -24,7 +24,7 @@ const navigate = useNavigate()
                         <h2 className="text-2xl font-bold ml-10 text-amber-700">weddings  Events</h2>
                         <p className="font-bold pt-5 pr-5 ">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
 
-                        <button className="bg-slate-300 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/weddings")}>View More</button>
+                        <button className="bg-slate-300 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/wedding")}>View More</button>
                     </div>
                 </div>
 
@@ -34,27 +34,27 @@ const navigate = useNavigate()
                         <h2 className="text-2xl font-bold ml-10 text-blue-950">Funerals Events</h2>
                         <p className="font-bold pt-5 pr-5 pl-5">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
 
-                        <button className="bg-orange-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/funerals")}>View More</button>
+                        <button className="bg-orange-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/funeral")}>View More</button>
                     </div>
 
                 </div>
 
-                <div className="shadow-md  p-10 text-center flex bg-cyan-200">
-                    <img src={parOne} alt="" />
+                <div className="shadow-md text-center grid grid-cols-2 bg-cyan-200">
+                    <img src={parOne} alt="" className="w-full h-full object-cover" />
                     <div className="pt-10 pl-5">
                         <h2 className="text-2xl font-bold">Parties Events</h2>
                         <p className="font-bold pt-5 pr-5 ">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
-                        <button className="bg-red-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/parties")}>View More</button>
+                        <button className="bg-red-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/parties")}>View More</button>
                     </div>
 
                 </div>
 
-                <div className="shadow-md  p-10 text-center flex bg-lime-200">
-                    <img src={catOne} alt="" className="w-1/2 " />
+                <div className="shadow-md text-center grid grid-cols-2 bg-lime-200">
+                    <img src={catOne} alt="" className="w-full h-full object-cover" />
                     <div className="pt-10 pl-5">
                         <h2 className="text-2xl font-bold  text-blue-950">Conference Events</h2>
                         <p className="font-bold pt-5 pr-5 ">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
-                        <button className="bg-slate-500 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/conference")}>View More</button>
+                        <button className="bg-slate-500 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/conference")}>View More</button>
                     </div>
 
                 </div>

@@ -1,8 +1,16 @@
 import React from 'react'
+import Hero from './components/hero'
+import WeddingEvents from './components/event'
+import WeddingGallery from './components/gallery'
 
 const WeddingPage = () => {
   return (
-    <div>WeddingPage</div>
+    <div>
+      <Hero/>
+      <WeddingEvents/>
+      <WeddingGallery/>
+      
+    </div>
   )
 }
 
