@@ -1,17 +1,17 @@
-
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/rootLayout";
 import LandingPage from "./pages/landing";
 import Parties from "./pages/parties";
 import WeddingPage from "./pages/weddings";
 import About from "./pages/about-us";
-import ContactUs from "./pages/contact-us";
+import ContactUs from "./pages/landing/components/contact-us";
 import Funeral from "./pages/funerals";
-import Events from "./pages/events";
+import EventCard from "./pages/events/eventCard";
 import SignUpForm from "./pages/signup";
 import LoginForm from "./pages/login";
-import EventForm from "./pages/eventForms/components/createEvents"
+import EventForm from "./pages/eventForms/components/createEvents";
+import Events from "./pages/events/events";
+import EventManagement from "./pages/eventForms/components/manageEvents";
 import Conference from "./pages/conferences";
 
 function App() {
@@ -30,11 +30,11 @@ function App() {
         },
 
         {
-          path: "about-us",
+          path: "about",
           element: <About />
         },
         {
-          path: "events",
+          path: "events/all",
           element: <Events />
         },
 
@@ -48,11 +48,12 @@ function App() {
           element: <WeddingPage />
         },
         {
-          path: "contact-us",
+          path: "contact",
           element: <ContactUs />
 
         },
         {
+          path: "events/funerals",
           path: "events/funerals",
           element: <Funeral />
 
@@ -75,7 +76,11 @@ function App() {
           path: "create-event",
           element: <EventForm/>
         },
-        
+        {
+          path: "manage-event",
+          element: <EventManagement/>
+        },
+
 
 
       ]

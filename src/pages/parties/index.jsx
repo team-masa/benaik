@@ -9,8 +9,7 @@ export function Parties() {
     <div>
       <Hero />
       <PartyEvent />
-      <PartyGallery/>
-      
+      <PartyGallery/>   
     </div>
   );
 }

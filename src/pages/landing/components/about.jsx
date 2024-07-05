@@ -5,7 +5,7 @@ const About = () => {
 const navigate = useNavigate()
 
     return (
-        <div className="p-10 font-thin">
+        <div id="about" className="p-10 font-thin">
             <div className="text-center text-2xl">
                 <h2 className="font-extrabold text-3xl text-center">About Us</h2>
 
