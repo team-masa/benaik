@@ -5,15 +5,15 @@ import featImg2 from '../../../assets/images/Home.jpeg';
 
 const Features = () => {
   return (
-    <div id="features" className="flex justify-center items-center py-16 px-8 bg-white">
+    <div id="features" className="flex justify-center items-center py-16 px-8 bg-white bg-gradient-to-r from-[#4052FF] via-[#aa588f] to-[#b45454] text-white">
       <div className="w-4/5 mx-auto grid grid-cols-1 md:grid-cols-2 ">
         {/* Efficient Event Planning  */}
         <div className="flex flex-col justify-center items-start text-left">
           <h2 className="text-3xl font-extrabold text-gray-900 mb-4">Efficient event planning</h2>
-          <p className="text-lg text-gray-500 mb-6 w-2/3">
+          <p className="text-lg text-gray-900 mb-6 w-2/3">
             Eventica's intuitive form allows event planners to easily capture key details like name, date, ticket price, venue, and branding.
           </p>
-          <button className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Get Started</button>
+          <button className="px-4 py-2 bg-indigo-900 text-white rounded hover:bg-indigo-400">Get Started</button>
         </div>
 
         { /* Key Features */}
@@ -33,8 +33,6 @@ const Features = () => {
         </div>
       </div>
         </div>
-
-        {/* Image */}
        
     </div>
   );

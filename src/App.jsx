@@ -1,20 +1,17 @@
-
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/rootLayout";
 import LandingPage from "./pages/landing";
 import Parties from "./pages/parties";
 import WeddingPage from "./pages/weddings";
 import About from "./pages/about-us";
-import ContactUs from "./pages/contact-us";
-<<<<<<< HEAD
+import ContactUs from "./pages/landing/components/contact-us";
 import Funeral from "./pages/funerals";
-=======
-import Events from "./pages/events";
+import EventCard from "./pages/events/eventCard";
 import SignUpForm from "./pages/signup";
 import LoginForm from "./pages/login";
 import EventForm from "./pages/eventForms/components/createEvents";
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
+import Events from "./pages/events/events";
+import EventManagement from "./pages/eventForms/components/manageEvents";
 
 function App() {
   const router = createBrowserRouter([
@@ -32,38 +29,30 @@ function App() {
         },
 
         {
-          path: "about-us",
+          path: "about",
           element: <About />
         },
         {
-          path: "events",
+          path: "events/all",
           element: <Events />
         },
 
         {
-<<<<<<< HEAD
-          path: "event/parties",
-=======
           path: "events/parties",
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
           element: <Parties />
         },
 
         {
-<<<<<<< HEAD
-          path: "event/wedding",
-=======
           path: "events/weddings",
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
           element: <WeddingPage />
         },
         {
-          path: "contact-us",
+          path: "contact",
           element: <ContactUs />
 
         },
         {
-          path: "event/funeral",
+          path: "events/funerals",
           element: <Funeral />
 
         },
@@ -79,6 +68,11 @@ function App() {
           path: "create-event",
           element: <EventForm/>
         },
+        {
+          path: "manage-event",
+          element: <EventManagement/>
+        },
+
 
 
       ]

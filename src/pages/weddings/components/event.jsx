@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 const WeddingEvents = () => {
@@ -72,14 +71,3 @@ const WeddingEvents = () => {
 }
 
 export default WeddingEvents;
-=======
-import React from 'react'
-
-const WeddingEvents = () => {
-  return (
-    <div>WeddingEvents</div>
-  )
-}
-
-export default WeddingEvents
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc

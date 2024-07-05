@@ -1,5 +1,6 @@
 
 import About from "./components/about"
+import ContactUs from "./components/contact-us"
 import Features from "./components/features"
 import Hero from "./components/hero"
 
@@ -10,6 +11,7 @@ const LandingPage = () => {
         <Hero/>
         <About/> 
         <Features/>
+        <ContactUs/>
     </div>
   )
 }

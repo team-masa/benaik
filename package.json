@@ -12,15 +12,15 @@
   "dependencies": {
     "@coreui/react": "^5.1.0",
     "@heroicons/react": "^2.1.4",
+    "@react-google-maps/api": "^2.19.3",
+    "axios": "^1.7.2",
     "lucide-react": "^0.399.0",
     "react": "^18.3.1",
     "react-datepicker": "^7.2.0",
     "react-dom": "^18.3.1",
-<<<<<<< HEAD
-    "react-icon": "^1.0.0",
-=======
     "react-hook-form": "^7.52.1",
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
+    "react-icon": "^1.0.0",
+    "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.0",
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",

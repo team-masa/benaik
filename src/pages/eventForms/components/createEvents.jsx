@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import axios from 'axios';
 
 const EventCreationForm = () => {
   const [name, setName] = useState('');
   const [date, setDate] = useState('');
   const [price, setPrice] = useState('');
   const [location, setLocation] = useState('');
-  const [flier, setFlier] = useState(null);
+  const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleFileChange = (e) => {
-    setFlier(e.target.files[0]);
+    setImage(e.target.files[0]);
+  };
+
+  const clearForm = () => {
+    setName('');
+    setDate('');
+    setPrice('');
+    setLocation('');
+    setImage(null);
+    // Reset the file input
+    document.getElementById('image').value = '';
   };
 
   const handleSubmit = async (e) => {
@@ -22,7 +34,7 @@ const EventCreationForm = () => {
     setError('');
     setSuccess(false);
 
-    if (!name || !date || !price || !location || !flier) {
+    if (!name || !date || !price || !location || !image) {
       setError('All fields are required.');
       setLoading(false);
       return;
@@ -34,21 +46,28 @@ const EventCreationForm = () => {
       formData.append('date', date);
       formData.append('price', price);
       formData.append('location', location);
-      formData.append('flier', flier);
+      formData.append('image', image);
 
-      const response = await fetch('/api/events', {
-        method: 'POST',
-        body: formData,
+      const response = await axios.post('https://event-management-app-3.onrender.com/events', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to create event');
-      }
-
       setSuccess(true);
-      console.log('Event created:', { name, date, price, location, flier });
+      console.log('Event created:', response.data);
+      
+      // Clear form fields after successful submission
+      clearForm();
+
+      // Navigate to the event management page
+      navigate('/manage-event');
+      
+      // Set a timeout to clear the success message after 3 seconds
+      setTimeout(() => setSuccess(false), 3000);
+
     } catch (error) {
-      setError(error.message);
+      setError(error.response?.data?.message || 'Failed to create event');
       console.error('Error creating event:', error);
     } finally {
       setLoading(false);
@@ -70,6 +89,7 @@ const EventCreationForm = () => {
           <input
             type="text"
             id="name"
+            name="name"
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -80,6 +100,7 @@ const EventCreationForm = () => {
         <div className="mb-4">
           <label htmlFor="date" className="block text-sm font-medium text-gray-700">Event Date</label>
           <input
+            name="date"
             type="date"
             id="date"
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
@@ -92,6 +113,7 @@ const EventCreationForm = () => {
         <div className="mb-4">
           <label htmlFor="price" className="block text-sm font-medium text-gray-700">Event Price</label>
           <input
+            name="price"
             type="number"
             id="price"
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
@@ -104,20 +126,23 @@ const EventCreationForm = () => {
         <div className="mb-4">
           <label htmlFor="location" className="block text-sm font-medium text-gray-700">Event Location</label>
           <input
+            name="location"
             type="text"
             id="location"
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             required
-          />
+          />Home
+
         </div>
 
         <div className="mb-4">
-          <label htmlFor="flier" className="block text-sm font-medium text-gray-700">Event Flier</label>
+          <label htmlFor="image" className="block text-sm font-medium text-gray-700">Event Flier</label>
           <input
+            name="image"
             type="file"
-            id="flier"
+            id="image"
             className="mt-1 block w-full text-sm text-gray-700 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             onChange={handleFileChange}
             required
@@ -126,7 +151,7 @@ const EventCreationForm = () => {
 
         <button
           type="submit"
-          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500"
+          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           disabled={loading}
         >
           {loading ? 'Creating...' : 'Create Event'}
