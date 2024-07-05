@@ -9,7 +9,7 @@ const FuneralEvent = () => {
       </div>
 
 
-      <div className="grid grid-cols-2 gap-10 pr-10 pl-10 mt-10">
+      <div className="grid grid-cols-2 gap-10 pr-10 pl-10 mt-10 brightness-75">
         <div>
           <iframe
             width="600"

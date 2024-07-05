@@ -11,7 +11,8 @@ import Funeral from "./pages/funerals";
 import Events from "./pages/events";
 import SignUpForm from "./pages/signup";
 import LoginForm from "./pages/login";
-import EventForm from "./pages/eventForms/components/createEvents";
+import EventForm from "./pages/eventForms/components/createEvents"
+import Conference from "./pages/conferences";
 
 function App() {
   const router = createBrowserRouter([
@@ -56,6 +57,12 @@ function App() {
           element: <Funeral />
 
         },
+
+        {
+          path: "events/conferences",
+          element: <Conference/>
+
+        },
         {
           path: "signup",
           element: <SignUpForm />
@@ -68,6 +75,7 @@ function App() {
           path: "create-event",
           element: <EventForm/>
         },
+        
 
 
       ]

@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import { weddingOne } from "../../../assets";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative w-full h-screen overflow-hidden">
       <video autoPlay muted loop className="absolute top-0 left-0 w-full h-full object-cover brightness-[50%]">
@@ -12,7 +14,7 @@ const Hero = () => {
         <h1 className="text-4xl font-bold text-center">
           Celebrate Your Love Unforgettable Weddings with Us
         </h1>
-        <button className="mt-5 px-6 py-3  font-semibold text-white bg-transparent rounded border hover:bg-cyan-600">Create Your Event</button>
+        <button className="mt-5 px-6 py-3  font-semibold text-white bg-transparent rounded border hover:bg-cyan-600" onClick={() => navigate("/create-event")}>Create Your Event</button>
       </div>
     </div>
   );

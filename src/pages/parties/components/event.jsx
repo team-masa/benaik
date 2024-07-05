@@ -1,13 +1,12 @@
 import React from 'react'
 
-<<<<<<< HEAD
 const PartyEvent = () => {
   return (
     <div>
       <div className='pt-10 font-extrabold text-center text-2xl'>
         <h1>These are some past Events</h1>
       </div>
-      <div className='grid grid-cols-2 gap-10 pl-10 pr-10 mt-10'>
+      <div className='grid grid-cols-2 gap-10 pl-10 pr-10 mt-10 brightness-75'>
         <div className=''>
           <iframe
             width="600"
@@ -73,12 +72,4 @@ const PartyEvent = () => {
 }
 
 export default PartyEvent
-=======
-const PartyEvents = () => {
-  return (
-    <div>PartyEvents</div>
-  )
-}
 
-export default PartyEvents
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc

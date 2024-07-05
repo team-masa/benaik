@@ -4,8 +4,10 @@ import '@coreui/coreui/dist/css/coreui.min.css';
 import heroImage1 from '../../../assets/images/party1.jpg';
 import heroImage2 from '../../../assets/images/part2.jpg';
 import heroImage3 from '../../../assets/images/party.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const PartyHero = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative h-[80vh] flex items-center justify-center bg-black overflow-hidden">
       <CCarousel  indicators interval={3000} className="absolute inset-0 w-full h-full">
@@ -25,7 +27,7 @@ const PartyHero = () => {
         <p className="text-xl mb-6">
           At Elite NYC Night Clubs & Lounges? Party like a Celebrity with BottleClients.
         </p>
-        <button className="px-6 py-3 bg-yellow-500 text-black font-bold rounded hover:bg-yellow-600">
+        <button className="px-6 py-3 bg-yellow-500 text-black font-bold rounded hover:bg-yellow-600" onClick={() => navigate("/create-event")}>
           Book Now
         </button>
       </div>

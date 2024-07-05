@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+    const navigate = useNavigate();
     return (
         <div className="relative h-screen">
             <Swiper
@@ -43,7 +45,7 @@ const Hero = () => {
                     Honoring Lives, Celebrating Memories <br /> Compassionate Funeral Services
                 </h1>
                 <div className="flex space-x-4">
-                    <button className="px-6 py-2 font-semibold text-white bg-transparent border border-white rounded hover:bg-blue-700">
+                    <button className="px-6 py-2 font-semibold text-white bg-transparent border border-white rounded hover:bg-blue-700" onClick={() => navigate("/create-event")}>
                         Plan a Service
                     </button>
                 </div>

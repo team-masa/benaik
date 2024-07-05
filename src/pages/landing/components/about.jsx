@@ -24,11 +24,7 @@ const navigate = useNavigate()
                         <h2 className="text-2xl font-bold ml-10 text-amber-700">weddings  Events</h2>
                         <p className="font-bold pt-5 pr-5 ">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
 
-<<<<<<< HEAD
-                        <button className="bg-slate-300 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/wedding")}>View More</button>
-=======
                         <button className="bg-slate-300 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/events/weddings")}>View More</button>
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
                     </div>
                 </div>
 
@@ -38,11 +34,8 @@ const navigate = useNavigate()
                         <h2 className="text-2xl font-bold ml-10 text-blue-950">Funerals Events</h2>
                         <p className="font-bold pt-5 pr-5 pl-5">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
 
-<<<<<<< HEAD
-                        <button className="bg-orange-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/funeral")}>View More</button>
-=======
                         <button className="bg-orange-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/events/funerals")}>View More</button>
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
+                        
                     </div>
 
                 </div>
@@ -52,11 +45,7 @@ const navigate = useNavigate()
                     <div className="pt-10 pl-5">
                         <h2 className="text-2xl font-bold">Parties Events</h2>
                         <p className="font-bold pt-5 pr-5 ">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
-<<<<<<< HEAD
-                        <button className="bg-red-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/parties")}>View More</button>
-=======
                         <button className="bg-red-200 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/events/parties")}>View More</button>
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
                     </div>
 
                 </div>
@@ -66,11 +55,7 @@ const navigate = useNavigate()
                     <div className="pt-10 pl-5">
                         <h2 className="text-2xl font-bold  text-blue-950">Conference Events</h2>
                         <p className="font-bold pt-5 pr-5 ">Contact us to learn more about our offerings and how we can help you plan your next event.</p>
-<<<<<<< HEAD
-                        <button className="bg-slate-500 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/event/conference")}>View More</button>
-=======
                         <button className="bg-slate-500 px-3 py-2 rounded-full drop-shadow-lg text-blue-950 font-bold mt-5" onClick={() => navigate("/events/conferences")}>View More</button>
->>>>>>> e4dd718691df067cb585fd8b8c30ba7e6b5124fc
                     </div>
 
                 </div>
