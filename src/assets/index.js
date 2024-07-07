@@ -1,4 +1,4 @@
-
+import React from "react";
 
 import weddOne from "./images/wedd..avif"
 import weddTwo from "./images/wedd1.avif";
