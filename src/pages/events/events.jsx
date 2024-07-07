@@ -3,15 +3,19 @@ import { useState, useEffect } from 'react';
 import EventCard from './eventCard';
 import axios from 'axios';
 
+// This component renders a list of events fetched from the server
 export default function Events() {
-  const [events, setEvents] = useState([]);
-  const [filteredEvents, setFilteredEvents] = useState([]);
+  // State hooks to manage the list of events and the filtered list based on search terms
+  const [events, setEvents] = useState([]); // List of all events
+  const [filteredEvents, setFilteredEvents] = useState([]); // List of events filtered based on search terms
+
+  // State hook to manage the search terms entered by the user
   const [searchTerms, setSearchTerms] = useState({
-    eventName: '',
-    location: '',
-    price: '',
-    startDate: '',
-    endDate: ''
+    eventName: '', // Name of the event
+    location: '', // Location of the event
+    price: '', // Price of the event
+    startDate: '', // Start date of the event
+    endDate: '' // End date of the event
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [eventsPerPage] = useState(4); // Number of events per page
