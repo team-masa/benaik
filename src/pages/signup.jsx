@@ -8,6 +8,10 @@ const SignUpForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!isTermsAgreed) {
+      alert('You must agree to the terms and conditions.');
+      return;
+    }
     // Backend logic goes here
     console.log('Form submitted:', { name, isTermsAgreed });
   };
@@ -18,12 +22,12 @@ const SignUpForm = () => {
         <ArrowLeft className="w-5 h-5 mr-2" />
         Back
       </Link>
-      
-      <h2 className="text-2xl font-bold mt-4 mb-6">SignUp for BENAIK</h2>
-      
+
+      <h2 className="text-2xl font-bold mt-4 mb-6">Sign Up for BENAIK</h2>
+
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Your name</label>
+          <label htmlFor="name" className="block text-sm font-medium text-gray-700">Your Name</label>
           <input
             type="text"
             id="name"
@@ -46,7 +50,8 @@ const SignUpForm = () => {
               required
             />
             <label htmlFor="termsAgreement" className="ml-2 block text-sm text-gray-700">
-              I agree to the Terms of Service and Privacy Policy.
+              I agree to the <Link to="/terms" className="text-blue-500 hover:underline">Terms of Service</Link> and{' '}
+              <Link to="/privacy" className="text-blue-500 hover:underline">Privacy Policy</Link>.
             </label>
           </div>
         </div>
@@ -55,14 +60,12 @@ const SignUpForm = () => {
           type="submit"
           className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#4338C9] hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
-          Sign up
+          Sign Up
         </button>
       </form>
 
       <p className="mt-4 text-xs text-center text-gray-500">
-        By signing up, you agree to our{' '}
-        <Link to="/terms" className="text-blue-500 hover:underline">Terms of Service</Link>,{' '}
-        <Link to="/privacy" className="text-blue-500 hover:underline">Privacy Policy</Link>, and{' '}
+        By signing up, you also agree to our{' '}
         <Link to="/cookies" className="text-blue-500 hover:underline">Cookie Policy</Link>.
       </p>
     </div>

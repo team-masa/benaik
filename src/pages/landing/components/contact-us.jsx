@@ -45,7 +45,6 @@ const ContactUs = () => {
                     <div className="bg-indigo-500 h-4 w-16 mb-2"></div>
                     <div className="bg-indigo-500 h-4 w-24 mb-6"></div>
 
-
                     <div className="space-y-4">
                         <div className="flex items-start">
                             <i className="fas fa-map-marker-alt text-navy-900 mt-1 mr-3"></i>

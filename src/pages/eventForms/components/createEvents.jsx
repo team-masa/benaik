@@ -133,8 +133,7 @@ const EventCreationForm = () => {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             required
-          />Home
-
+          />
         </div>
 
         <div className="mb-4">
