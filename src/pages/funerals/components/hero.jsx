@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { funFive, funFour, funOne, funThree, funTwo } from "../../../assets";
 import { Swiper, SwiperSlide } from 'swiper/react';

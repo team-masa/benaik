@@ -1,3 +1,5 @@
+import React from 'react';
+
 import PartyEvent from "./components/event";
 import PartyGallery from "./components/gallery";
 

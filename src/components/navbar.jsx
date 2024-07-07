@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import * as Scroll from "react-scroll";
@@ -28,7 +30,7 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-2"> 
+            <div className="ml-10 flex items-baseline space-x-2">
               {pathname == "/" ? (
                 <>
                   <ScrollLink
@@ -37,7 +39,7 @@ const Navbar = () => {
                     smooth={true}
                     offset={-75}
                     duration={500}
-                    className="cursor-pointer hover:text-[#4052FF] px-2" 
+                    className="cursor-pointer hover:text-[#4052FF] px-2"
                   >
                     Home
                   </ScrollLink>

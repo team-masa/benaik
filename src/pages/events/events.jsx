@@ -1,4 +1,3 @@
-// src/pages/events.jsx
 import { useState, useEffect } from 'react';
 import EventCard from './eventCard';
 import axios from 'axios';

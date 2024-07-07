@@ -1,3 +1,5 @@
+
+
 import weddOne from "./images/wedd..avif"
 import weddTwo from "./images/wedd1.avif";
 import partyOne from "./images/party.jpg"; 
