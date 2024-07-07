@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node Modules and Build Output
 node_modules
 dist
 dist-ssr
@@ -22,3 +23,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Operating system-specific files
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
